@@ -29,12 +29,12 @@ var appEnv = cfenv.getAppEnv();
  * base address http://MYSERVERNAME.mybluemix.net/
 **/
 var userCount = 0;
-/* add var definition for your new variable, userbytwo here */
+var userbytwo = 0;
 
 app.get('/', function(req, res){
   userCount = userCount + 1;
-  /* add statement to increment userbytwo by two here */
-  res.render('index', {userCount: userCount}); /* update this line to also pass userbytwo */
+  userbytwo = userbytwo + 2;
+  res.render('index', {userCount: userCount, userbytwo: userbytwo}); 
 });
 
 // start server on the specified port and binding host
